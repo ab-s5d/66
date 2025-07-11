@@ -5,144 +5,322 @@
   <meta content="yes" name="apple-touch-fullscreen">
   <meta content="black" name="apple-mobile-web-app-status-bar-style">
   <meta content="320" name="MobileOptimized">
-  <title>加载中...</title>
+  <title></title>
 <style>
 .container {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotate-move 2s ease-in-out infinite;
-  z-index: 9999; /* 确保动画显示在最上层 */
-}
-.dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.dot-3 { background-color: #f74d75; animation: dot-3-move 2s ease infinite; }
-.dot-2 { background-color: #10beae; animation: dot-2-move 2s ease infinite; }
-.dot-1 { background-color: #ffe386; animation: dot-1-move 2s ease infinite; }
-/* 动画关键帧保持不变... */
-@keyframes dot-3-move { /* ... */ }
-@keyframes dot-2-move { /* ... */ }
-@keyframes dot-1-move { /* ... */ }
-@keyframes rotate-move { /* ... */ }
-.content {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  border: none; /* 移除iframe边框 */
-}
-.error-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 80px);
-  color: #f44336;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  z-index: 9998;
-}
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .dot-3 {
+        background-color: #f74d75;
+    }
+
+    .dot-2 {
+        background-color: #10beae;
+    }
+
+    .dot-1 {
+        background-color: #ffe386;
+    }
+
+    .dot-3 {
+        background-color: #f74d75;
+        animation: dot-3-move 2s ease infinite;
+    }
+
+    @keyframes dot-3-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translateY(-18px) scale(.45)
+        }
+
+        60% {
+            transform: translateY(-25px) scale(.45)
+        }
+
+        80% {
+            transform: translateY(-25px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    .dot-2 {
+        background-color: #10beae;
+        animation: dot-2-move 2s ease infinite;
+    }
+
+    .dot-1 {
+        background-color: #ffe386;
+        animation: dot-1-move 2s ease infinite;
+    }
+
+    @keyframes dot-2-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(-16px, 12px) scale(.45)
+        }
+
+        60% {
+            transform: translate(-20px, 15px) scale(.45)
+        }
+
+        80% {
+            transform: translate(-20px, 15px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    @keyframes dot-1-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(16px, 12px) scale(.45)
+        }
+
+        60% {
+            transform: translate(20px, 15px) scale(.45)
+        }
+
+        80% {
+            transform: translate(20px, 15px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    .container {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotate-move 2s ease-in-out infinite;
+    }
+
+    @keyframes rotate-move {
+        55% {
+            transform: translate(-50%, -50%) rotate(0deg)
+        }
+
+        80% {
+            transform: translate(-50%, -50%) rotate(360deg)
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg)
+        }
+    }
+.container {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .dot-3 {
+        background-color: #f74d75;
+    }
+
+    .dot-2 {
+        background-color: #10beae;
+    }
+
+    .dot-1 {
+        background-color: #ffe386;
+    }
+
+    .dot-3 {
+        background-color: #f74d75;
+        animation: dot-3-move 2s ease infinite;
+    }
+
+    @keyframes dot-3-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translateY(-18px) scale(.45)
+        }
+
+        60% {
+            transform: translateY(-25px) scale(.45)
+        }
+
+        80% {
+            transform: translateY(-25px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    .dot-2 {
+        background-color: #10beae;
+        animation: dot-2-move 2s ease infinite;
+    }
+
+    .dot-1 {
+        background-color: #ffe386;
+        animation: dot-1-move 2s ease infinite;
+    }
+
+    @keyframes dot-2-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(-16px, 12px) scale(.45)
+        }
+
+        60% {
+            transform: translate(-20px, 15px) scale(.45)
+        }
+
+        80% {
+            transform: translate(-20px, 15px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    @keyframes dot-1-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(16px, 12px) scale(.45)
+        }
+
+        60% {
+            transform: translate(20px, 15px) scale(.45)
+        }
+
+        80% {
+            transform: translate(20px, 15px) scale(.45)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    .container {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: rotate-move 2s ease-in-out infinite;
+    }
+
+    @keyframes rotate-move {
+        55% {
+            transform: translate(-50%, -50%) rotate(0deg)
+        }
+
+        80% {
+            transform: translate(-50%, -50%) rotate(360deg)
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg)
+        }
+    }
+   .content{height:100%;width:100%;position: fixed;left: -2px;top: -2px;}
 </style>
-</head>
 <body>
+
 <div class="container">
-  <div class="dot dot-1"></div>
-  <div class="dot dot-2"></div>
-  <div class="dot dot-3"></div>
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
 </div>
-<div id="error-message" class="error-message" style="display: none;"></div>
-
-<script>
-// 错误处理函数
-function showError(message) {
-  const errorElement = document.getElementById('error-message');
-  errorElement.textContent = message;
-  errorElement.style.display = 'block';
-  console.error(message);
+ <script>
+var urlParams = new URLSearchParams(window.location.search);
+var encodedParam = urlParams.get('c');
+var tureurl = atob(encodedParam);
+if (tureurl.includes("http")) {
+var square = document.getElementById("container");
+setTimeout(function() {
+  square.style.display = "none";
+}, 1500);
+ var html='<iframe class="content" οnlοad="bindMouseWhee(this)" src='+tureurl+'></iframe>';
+  document.writeln(html);
+console.log(tureurl);
+} else {
+  console.log("nourls");
 }
-
-// 主逻辑
-try {
-  const urlParams = new URLSearchParams(window.location.search);
-  const encodedParam = urlParams.get('c');
-  
-  if (!encodedParam) {
-    throw new Error('URL参数c缺失，请提供编码后的网址');
-  }
-  
-  const trueUrl = atob(encodedParam);
-  console.log('解码后的网址:', trueUrl);
-  
-  if (!trueUrl.includes('http')) {
-    throw new Error(`解码后的网址不包含http协议: ${trueUrl}`);
-  }
-  
-  // 1.5秒后隐藏加载动画
-  const container = document.querySelector('.container');
-  setTimeout(() => {
-    if (container) container.style.display = 'none';
-  }, 1500);
-  
-  // 创建并插入iframe
-  const iframe = document.createElement('iframe');
-  iframe.className = 'content';
-  iframe.src = trueUrl;
-  
-  // iframe加载成功/失败的回调
-  iframe.onload = function() {
-    console.log('iframe加载成功');
-    try {
-      bindMouseWhee(this);
-    } catch (e) {
-      console.log('绑定鼠标滚轮事件失败:', e);
-      // 不影响iframe显示
-    }
-  };
-  
-  iframe.onerror = function() {
-    showError(`iframe加载失败: ${trueUrl}`);
-  };
-  
-  document.body.appendChild(iframe);
-  
-} catch (error) {
-  showError(`加载过程出错: ${error.message}`);
-}
-</script>
-
-<script>
-// 鼠标滚轮处理（保持不变）
+  </script>
+ <script>
 var firefox = navigator.userAgent.indexOf('Firefox') != -1;
-function MouseWheel(e, doc) {
-  e.preventDefault && e.preventDefault();
-  e.returnValue = false;
-  var up = firefox && e.detail < 0 || e.wheelDelta > 0;
-  doc.body.scrollTop = doc.documentElement.scrollTop += up ? -50 : 50;
+function MouseWheel(e,doc){
+	e.preventDefault && e.preventDefault(),e.returnValue = false;
+	var up = firefox && e.detail < 0 || e.wheelDelta > 0;
+	doc.body.scrollTop = doc.documentElement.scrollTop += up?-50:50;
 }
-function bindMouseWhee(ifr) {
-  try {
-    var doc = ifr.contentWindow.document;
-    if (firefox) {
-      doc.addEventListener('DOMMouseScroll', function(e) { MouseWheel(e, doc); }, false);
-    } else {
-      doc.onmousewheel = function(e) { MouseWheel(e || ifr.contentWindow.event, doc); };
-    }
-  } catch (e) {
-    console.log('跨域无法获取iframe文档:', e);
-  }
+function bindMouseWhee(ifr){
+	try{
+		var doc = ifr.contentWindow.document;
+		firefox?doc.addEventListener('DOMMouseScroll',function(e){MouseWheel(e,doc)},false):(doc.onmousewheel = function(e){MouseWheel(e||ifr.contentWindow.event,doc)});
+	}catch(e){
+		alert('跨域无法获取iframe加载document'+e);
+	}
 }
-</script>
-</body>
-</html>
+</script> 
